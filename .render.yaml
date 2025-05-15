@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: les-meilleurs-sportifs
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build:ssr
+    startCommand: npm run serve:ssr
+    autoDeploy: true
+    branch: main  # ou master selon ton dépôt GitHub
+    region: oregon
